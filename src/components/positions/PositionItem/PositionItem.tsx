@@ -1,6 +1,10 @@
 import React, {FC} from "react";
 import classes from './PositionItem.module.scss';
 import {Position} from "../../../models/Position";
+import {Link, NavLink} from "react-router-dom";
+import PositionHeading from "../PositionHeading/PositionHeading";
+import PositionLocation from "../PositionLocation/PositionLocation";
+import NavigationButton from "../../UI/NavigationButton";
 
 export interface IPositionItem {
     item: Position
@@ -12,15 +16,15 @@ const PositionItem:FC<IPositionItem> = ({
     return (
         <li className={classes.item}>
             <div className={classes.detailsBlock}>
-                <h2 className={classes.title}>{item.title}</h2>
-                <p className={classes.location}>
+                <PositionHeading>{item.title}</PositionHeading>
+                <PositionLocation>
                     {item.location}
-                </p>
+                </PositionLocation>
             </div>
             <div className={classes.showMoreBlock}>
-                <button>
+                <NavigationButton to={`/${item.id}`}>
                     Show more
-                </button>
+                </NavigationButton>
             </div>
         </li>
     )
