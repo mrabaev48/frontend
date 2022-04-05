@@ -1,10 +1,9 @@
 import React, {FC} from "react";
 import classes from './PositionItem.module.scss';
-import {Position} from "../../../models/Position";
-import {Link, NavLink} from "react-router-dom";
-import PositionHeading from "../PositionHeading/PositionHeading";
-import PositionLocation from "../PositionLocation/PositionLocation";
-import NavigationButton from "../../UI/NavigationButton";
+import {Position} from "../../../../models/Position";
+import PositionHeading from "../../PositionHeading/PositionHeading";
+import PositionLocation from "../../PositionLocation/PositionLocation";
+import NavigationButton from "../../../UI/NavigationButton";
 
 export interface IPositionItem {
     item: Position

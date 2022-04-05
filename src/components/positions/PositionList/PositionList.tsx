@@ -1,7 +1,7 @@
 import React, {FC} from "react";
 import classes from './PositionList.module.scss';
 import {Position} from "../../../models/Position";
-import PositionItem from "../PositionItem/PositionItem";
+import PositionItem from "../PositionDescription/PositionItem/PositionItem";
 
 export interface IPositionListProps {
     positions: Position[];
